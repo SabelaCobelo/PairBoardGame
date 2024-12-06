@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Busca las parejas - SCL </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="ruta/a/tu/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!--CONTENEDOR PRINCIPAL-->
+    <div class="container">
+        <header>
+            <h1>BUSCA LAS PAREJAS</h1>
+            <h2>Sabela Cobelo Losada</h2>
+        </header>
+        <!---->
+        <div class="game-info">
+            <div class="left-panel">
+                <p><strong>Intentos actuales:</strong> <span id="intentos">0</span></p>
+                <p><strong>Parejas restantes:</strong> <span id="parejas-restantes">6</span></p>
+            </div>
+
+            <div class="right-panel">
+                <label for="dificultad">Dificultad:</label>
+                <select id="dificultad">
+                    <option value="3x4">Fácil (3x4)</option>
+                    <option value="4x4">Medio (4x4)</option>
+                    <option value="5x4">Difícil (5x4)</option>
+                    <option value="personalizado">Personalizado</option>
+                </select>
+                
+                <div id="personalizado-opciones" class="hidden">
+                    <label for="filas">Filas:</label>
+                    <input type="number" id="filas" min="2" max="10">
+                    <label for="columnas">Columnas:</label>
+                    <input type="number" id="columnas" min="2" max="10">
+                </div>
+                <button id="btn-dificultad">Selecciona la dificultad</button>
+            </div>
+        </div>
+
+        <div class="tablero-container">
+            <div id="tablero" class="tablero"></div>
+        </div>
+
+        <div id="mensaje" class="mensaje"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
