@@ -1,14 +1,14 @@
 //DECLARACIÓN DE VARIABLES
 
-/*tablero es el área donde se dibujo el tablero*/
+/*tablero es el área donde se dibuja el tablero*/
 const tablero = document.getElementById('tablero');
 /*mensaje es el espacio donde aparecen los mensajes rápidos*/
 const mensaje = document.getElementById('mensaje');
-/*Se inicia el contador de intentos*/
+/*contador con los intentos que el usuario ha realizado*/
 let intentos = 0;
-/*Inicia las parejas restantes*/
+/*parejas restantes que se inicia en 6 por defecto*/
 let parejasRestantes = 6;
-/*Casillas que se seleccionan para compararlas */
+/* Guarda las casillas que se seleccionan para compararlas */
 let seleccionadas = [];
 /*Se activan todas las casillas */
 let casillas;
