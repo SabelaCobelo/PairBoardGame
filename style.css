@@ -97,3 +97,20 @@ con coherencia el estilo del resto del proyecto*/
   #dificultad:focus, #filas:focus, #columnas:focus {
     border-color: #004d40;
   }
+
+  /*Se aplica estilo al botón de inicio de de seleccion de dificultad*/
+  button {
+    background-color: #00796b;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+  }
+
+  button:hover {
+    background-color: #004d40;
+  }
+
