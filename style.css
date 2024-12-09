@@ -9,4 +9,16 @@ y por último la fuente utilizada*/
     box-sizing: border-box;
     font-family: 'Arial', sans-serif;
   }
-  
+
+  /*Aplica el estilo a la parte del "body", 
+el background tiene un clor gradiente que cambia de blanco a azul clarito
+display flex y justify content para que los elementos se organicen de forma flexible 
+y el contenido esté alineado y justificado al centro
+La altura ocupa el 100% de la ventana del navegador*/
+body {
+    background: linear-gradient(to bottom right, #e0f7fa, #80deea);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
