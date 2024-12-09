@@ -22,3 +22,15 @@ body {
     align-items: center;
     height: 100vh;
   }
+
+/*Estilo a la clase container que abarca el contenido del juego
+con el texto alineado al centro, un padding para darle mas espacio entre el contenido y el contenedor
+un fondo blanco y un borde redondeado blanco con un sombra ligera y un ancho del 70%*/
+.container {
+    padding: 70px;
+    text-align: center;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 70%;
+  }
