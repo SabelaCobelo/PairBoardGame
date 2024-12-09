@@ -34,3 +34,25 @@ un fondo blanco y un borde redondeado blanco con un sombra ligera y un ancho del
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     width: 70%;
   }
+
+  /*Se establece un margen inferior para el header de 20px*/
+header {
+    margin-bottom: 20px;
+  }
+
+  /*Se aplica estilo en el h1 y el h2 para la tipografía dentro de esas etiquetas
+con un tamaño de fuente, un color, etc*/
+h1 {
+    color: #00796b;
+    font-size: 28px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif ;
+  }
+  
+  h2 {
+    padding-top: 10px;
+    color: #004d40;
+    font-size: 20px;
+    font-style: italic;
+    padding-bottom: 50px;
+    font-size: 18px;
+  }
