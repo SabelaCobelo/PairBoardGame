@@ -153,6 +153,31 @@ un hover para hacerlo más visual y otro color mas oscuro si la pareja se ha eno
   background-color: #cab308;
 }
 
+/*Se establece un mensaje cuando el usuario no consigue emparejar
+las dos cartas, en la zona inferior de color rojo*/
+.mensaje {
+  color: #d6336c;
+  font-size: 18px;
+  margin-top: 10px;
+}
+/*Estilo para ocultar el elemento*/
+.hidden {
+  display: none;
+}
+/*Estilo para el mensaje que salta cuando se gana el juego, 
+de color verde*/
+#mensaje-ganador {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #38c172;
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 24px;
+  z-index: 1000;
+}
 
 
 
