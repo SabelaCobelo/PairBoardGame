@@ -1,5 +1,5 @@
 
-/*Selector universal aplica a todos los elementos de la página
+    /*Selector universal aplica a todos los elementos de la página
 el margin y padding a 0 eliminan cualquier espacio extra de los elementos
 border box para que los elementos incluyan border y relleno
 y por último la fuente utilizada*/
@@ -23,7 +23,7 @@ body {
     height: 100vh;
   }
 
-/*Estilo a la clase container que abarca el contenido del juego
+    /*Estilo a la clase container que abarca el contenido del juego
 con el texto alineado al centro, un padding para darle mas espacio entre el contenido y el contenedor
 un fondo blanco y un borde redondeado blanco con un sombra ligera y un ancho del 70%*/
 .container {
@@ -55,4 +55,45 @@ h1 {
     font-style: italic;
     padding-bottom: 50px;
     font-size: 18px;
+  }
+
+  /*Se aplica el estilo al contenedor de los paneles de info:
+donde se encuentra el numero de dificultad o se selecciona el numero de cartas*/
+.game-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    max-width: 600px;
+    margin: 0 auto 20px auto;
+  }
+
+    /*Se aplica el estilo a los dos paneles (izquierdo y derecho), siguiendo 
+con coherencia el estilo del resto del proyecto*/
+.left-panel, .right-panel {
+    background: #f1f8e9;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    margin: 0 10px;
+    margin-inline: 20px;
+  }
+  
+  .left-panel p, .right-panel p, .right-panel label {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+  
+  #dificultad, #filas, #columnas {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #00796b;
+    border-radius: 5px;
+    width: 100%;
+    outline: none;
+  }
+  
+  #dificultad:focus, #filas:focus, #columnas:focus {
+    border-color: #004d40;
   }
