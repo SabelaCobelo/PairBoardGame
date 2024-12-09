@@ -100,3 +100,30 @@ function seleccionarCasilla(casilla) {
     }
 }
 
+
+//COMPROBACIÓN DE LA PAREJA SELECCIONADA
+function comprobarPareja() {
+    const [casilla1, casilla2] = seleccionadas;
+//Si las casillas coinciden, reduce el numero de parejas restantes y muestra un mensaje
+    if (casilla1.dataset.valor === casilla2.dataset.valor) {
+        parejasRestantes--;
+        document.getElementById('parejas-restantes').textContent = parejasRestantes;
+        mostrarMensaje('¡Acertaste una pareja!');
+        
+        // Comprobación si el jugador ha ganado
+        if (parejasRestantes === 0) {
+            mostrarMensajeGanador('¡Has ganado el juego!');
+        }
+//Si las parejas no coinciden, las casaillas se esconden de nuevo
+        seleccionadas = [];
+    } else {
+        mostrarMensaje('Fallaste. Intenta de nuevo.');
+        setTimeout(() => {
+            casilla1.textContent = '';
+            casilla1.classList.remove('revealed');
+            casilla2.textContent = '';
+            casilla2.classList.remove('revealed');
+            seleccionadas = [];
+        }, 1000);
+    }
+}
