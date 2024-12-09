@@ -47,3 +47,36 @@ function iniciarJuego() {
     generarTablero(dificultadSeleccionada);
     console.log(`Iniciando juego: Intentos = ${intentos}, Parejas Restantes = ${parejasRestantes}`); // Debug
 }
+
+
+//GENERAR EL TABLERO
+
+//divide la dificultad entre filas y columnas
+function generarTablero(dificultad) {
+    let [filas, columnas] = dificultad.split('x').map(Number);
+    let totalCasillas = filas * columnas;
+
+    console.log(`Generando tablero: Filas = ${filas}, Columnas = ${columnas}, Total Casillas = ${totalCasillas}`);  // Debug
+
+// Generar números aleatorios en parejas
+    let numeros = [];
+    for (let i = 1; i <= totalCasillas / 2; i++) {
+        numeros.push(i);
+        numeros.push(i);
+    }
+//mezcla los numero al azar para desordenarlos
+    numeros = numeros.sort(() => 0.5 - Math.random()); 
+//limpia el tablero anterior
+    tablero.innerHTML = ''; 
+    tablero.style.gridTemplateColumns = `repeat(${columnas}, 80px)`;
+//crea las casiillas del tablero
+    numeros.forEach((numero) => {
+        const casilla = document.createElement('div');
+        casilla.classList.add('casilla');
+        casilla.dataset.valor = numero;
+        casilla.addEventListener('click', () => seleccionarCasilla(casilla));
+        tablero.appendChild(casilla);
+    });
+//muestra las casillas en pantalla
+    casillas = document.querySelectorAll('.casilla');
+}
