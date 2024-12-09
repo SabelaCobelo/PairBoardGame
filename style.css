@@ -1,0 +1,12 @@
+
+/*Selector universal aplica a todos los elementos de la página
+el margin y padding a 0 eliminan cualquier espacio extra de los elementos
+border box para que los elementos incluyan border y relleno
+y por último la fuente utilizada*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+  }
+  
