@@ -114,3 +114,45 @@ con coherencia el estilo del resto del proyecto*/
     background-color: #004d40;
   }
 
+  /*Estilo aplicado al contenedor del tablero
+para posicionarlo en el centro de la página*/
+.tablero-container {
+  display: flex;
+  justify-content: center;
+}
+/*Se hace un grid  para hacer una cuadrícula con las cartas y
+que las columnas se repitan. Con un espacio entre ellas y un padding y margen*/
+.tablero {
+  display: grid;
+  grid-template-columns: repeat(4, 80px);
+  grid-gap: 10px;
+  margin-bottom: 20px;
+  padding-top: 60px;
+}
+/*S establece el estilo de cada casilla (card), con un tamaño de 80x80px
+un hover para hacerlo más visual y otro color mas oscuro si la pareja se ha enontrado*/
+.casilla {
+  width: 80px;
+  height: 80px;
+  background-color: #404b78;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.casilla:hover {
+  background-color: #ffab00;
+}
+
+.casilla.revealed {
+  background-color: #cab308;
+}
+
+
+
+
