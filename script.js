@@ -80,3 +80,23 @@ function generarTablero(dificultad) {
 //muestra las casillas en pantalla
     casillas = document.querySelectorAll('.casilla');
 }
+
+//FUNCION DE SELECCIONAR CASILLA
+
+//Solo permite seleccionar dos casillas al mismo tiempo
+//Muestra el número oculto que hay en las casillas
+function seleccionarCasilla(casilla) {
+    if (seleccionadas.length < 2 && !casilla.classList.contains('revealed')) {
+        casilla.textContent = casilla.dataset.valor;
+        casilla.classList.add('revealed');
+        seleccionadas.push(casilla);
+//Si hay dos casillas seleccionadas llama al método comprobar pareja
+//añade un intento al numero de intentos totales
+        if (seleccionadas.length === 2) {
+            intentos++;
+            document.getElementById('intentos').textContent = intentos;
+            comprobarPareja();
+        }
+    }
+}
+
