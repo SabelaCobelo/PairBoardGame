@@ -127,3 +127,29 @@ function comprobarPareja() {
         }, 1000);
     }
 }
+
+//FUNCIONES PARA MOSTRAR MENSAJES
+
+//Muestra mensaje de forma temporal
+function mostrarMensaje(texto) {
+    mensaje.textContent = texto;
+    setTimeout(() => mensaje.textContent = '', 2000);
+}
+
+//Muestra el mensaje ganador si has acertado las parejas
+function mostrarMensajeGanador(texto) {
+    const mensajeGanador = document.createElement('div');
+    mensajeGanador.id = 'mensaje-ganador';
+    mensajeGanador.textContent = texto;
+    document.body.appendChild(mensajeGanador);
+
+    // El mensaje desaparece después de 3 segundos
+    setTimeout(() => {
+        mensajeGanador.remove();
+//Se reinicia el juego
+        iniciarJuego(); 
+    }, 3000);
+}
+
+// Iniciar juego al actualizar o cargar la página
+iniciarJuego();
